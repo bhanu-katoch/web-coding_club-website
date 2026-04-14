@@ -35,8 +35,8 @@
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-org/club-hub.git
-cd club-hub
+git clone https://github.com/bhanu-katoch/web-coding_club-website.git
+cd web-coding_club-website
 
 # Install dependencies
 npm install
@@ -68,7 +68,7 @@ The app will be available at `http://localhost:3000`.
 ## 📁 Project Structure
 
 ```
-club-hub/
+web-coding_club-website/
 ├── public/               # Static assets
 ├── src/
 │   ├── app/              # Next.js App Router pages
