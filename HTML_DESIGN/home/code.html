@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-error-container": "#510017",
+                    "inverse-primary": "#7387ff",
+                    "surface-bright": "#f9f5ff",
+                    "on-primary-fixed-variant": "#001a88",
+                    "tertiary-dim": "#005c2b",
+                    "on-secondary-fixed-variant": "#9b2200",
+                    "primary-fixed": "#8999ff",
+                    "secondary-fixed": "#ffc4b6",
+                    "on-primary": "#f3f1ff",
+                    "surface-container-lowest": "#ffffff",
+                    "outline-variant": "#aca8d7",
+                    "surface-tint": "#2444eb",
+                    "tertiary-fixed": "#3fff8b",
+                    "error-container": "#f74b6d",
+                    "inverse-on-surface": "#9c98c6",
+                    "on-secondary": "#ffefec",
+                    "error-dim": "#a70138",
+                    "on-tertiary-container": "#005d2c",
+                    "background": "#f9f5ff",
+                    "on-surface-variant": "#5a5781",
+                    "tertiary-fixed-dim": "#24f07e",
+                    "secondary-fixed-dim": "#ffb09d",
+                    "on-error": "#ffefef",
+                    "outline": "#75729e",
+                    "surface-container": "#eae5ff",
+                    "tertiary-container": "#3fff8b",
+                    "surface-container-high": "#e3dfff",
+                    "on-secondary-fixed": "#681300",
+                    "secondary": "#af2700",
+                    "secondary-container": "#ffc4b6",
+                    "primary-fixed-dim": "#778aff",
+                    "tertiary": "#006a33",
+                    "on-surface": "#2d2a51",
+                    "on-tertiary": "#cdffd3",
+                    "on-primary-fixed": "#000000",
+                    "surface-container-low": "#f3eeff",
+                    "primary": "#2444eb",
+                    "on-tertiary-fixed-variant": "#006832",
+                    "on-secondary-container": "#8b1d00",
+                    "inverse-surface": "#0b082f",
+                    "error": "#b41340",
+                    "primary-dim": "#0934e0",
+                    "secondary-dim": "#9a2100",
+                    "surface": "#f9f5ff",
+                    "on-background": "#2d2a51",
+                    "on-tertiary-fixed": "#004820",
+                    "primary-container": "#8999ff",
+                    "on-primary-container": "#001470",
+                    "surface-variant": "#ddd9ff",
+                    "surface-container-highest": "#ddd9ff",
+                    "surface-dim": "#d4cfff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .shadow-soft { box-shadow: 0 20px 40px rgba(45, 42, 81, 0.06); }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body text-on-surface antialiased">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/70 dark:bg-slate-950/70 backdrop-blur-xl shadow-soft">
+<div class="flex justify-between items-center px-8 h-20 w-full max-w-7xl mx-auto">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-600 to-indigo-400 flex items-center justify-center">
+<span class="material-symbols-outlined text-white" style="font-variation-settings: 'FILL' 1;">rocket_launch</span>
+</div>
+<h1 class="font-headline text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-indigo-600 to-indigo-400 tracking-tight">Kinetic Club</h1>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-indigo-700 dark:text-indigo-300 font-bold border-b-2 border-indigo-600 py-1 transition-colors duration-300" href="#">Home</a>
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-indigo-500 transition-colors duration-300" href="#">Events</a>
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-indigo-500 transition-colors duration-300" href="#">Store</a>
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-indigo-500 transition-colors duration-300" href="#">Projects</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-full hover:bg-indigo-50 transition-colors text-indigo-600">
+<span class="material-symbols-outlined">shopping_bag</span>
+</button>
+<button class="hidden md:block bg-gradient-to-br from-primary to-primary-container text-white px-6 py-2.5 rounded-full font-label font-bold text-sm hover:scale-105 active:scale-95 transition-all">
+                    Join Us
+                </button>
+</div>
+</div>
+</header>
+<main class="pt-28 pb-32">
+<!-- Latest News Carousel Section -->
+<section class="max-w-7xl mx-auto px-6 mb-20">
+<div class="flex items-end justify-between mb-8">
+<div>
+<span class="font-label text-secondary text-sm font-bold tracking-[0.05em] uppercase">What's New</span>
+<h2 class="font-headline text-display-lg text-4xl md:text-5xl font-extrabold tracking-tight mt-2">Latest News</h2>
+</div>
+<div class="flex gap-2 mb-2">
+<button class="w-12 h-12 rounded-full border border-outline-variant/30 flex items-center justify-center hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-12 h-12 rounded-full border border-outline-variant/30 flex items-center justify-center hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="flex gap-6 overflow-x-auto no-scrollbar pb-4 snap-x">
+<!-- News Card 1 -->
+<div class="min-w-[85vw] md:min-w-[600px] snap-center bg-surface-container-lowest rounded-[2rem] overflow-hidden shadow-soft flex flex-col md:flex-row h-full">
+<div class="w-full md:w-1/2 h-64 md:h-auto overflow-hidden">
+<img alt="Students collaborating" class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-700" data-alt="dynamic group of diverse university students collaborating in a modern brightly lit tech lab with neon accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA43TO7-MzV48L8tUDmtMO-4soMpPKDMCHcedVarCWRb6F5He7zVHniYBvbtKxCZrSTiIQufGLWWTEJHB4CuBGZgDKEh-qSLJDnH6m7P_0Rb6xb8Ej_zdSRCknFhNMEHz4MuWSRJAsHVpIYIIBFel_BpzmTkwMTVTdxlK12Y9oSaZCxDU4t5HhqIeUbA9RcKmAVK0QmaQMOyyqvdabqvt8Tm4bVP5NuZ-nL-syIagJWjgFbuNV7EgiX2sY3_Ko_uXCzgTERey5EY6Va"/>
+</div>
+<div class="w-full md:w-1/2 p-8 flex flex-col justify-between">
+<div>
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-xs font-bold font-label mb-4 inline-block">ACADEMICS</span>
+<h3 class="font-headline text-2xl font-bold leading-tight mb-4 text-on-surface">Fall Hackathon Registration Now Open</h3>
+<p class="text-on-surface-variant line-clamp-3">Join over 500 students for 48 hours of building, learning, and competing for over $10,000 in prizes.</p>
+</div>
+<a class="mt-6 flex items-center gap-2 text-primary font-bold hover:gap-3 transition-all" href="#">
+                            Read Story <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- News Card 2 -->
+<div class="min-w-[85vw] md:min-w-[600px] snap-center bg-surface-container-lowest rounded-[2rem] overflow-hidden shadow-soft flex flex-col md:flex-row h-full">
+<div class="w-full md:w-1/2 h-64 md:h-auto overflow-hidden">
+<img alt="Workshop session" class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-700" data-alt="close up of energetic student workshop with sticky notes on glass wall and soft afternoon sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7MIjaCngtsRuv8GADI0JiwD2MKsl38Ru4Wo7kQE3YvmYi9xEoc3VAeL1hGqsMQ4YAi0je_qg_EcyaCXtxNek4f3dZTBI7MHN5EOnk_haZUbzt4M44pGZCbFEx-WZdNsQW6n5rp4VUDtQz19VBhLcCjKFtMSzQ79wzP-uV13kkotNHFPmb0chD2bkC3XrnHhj02bFvEbCgSZxnAW_cHK9v_fN8sEul9nDKJn772EcYrVM3LQwXDrmRooInGeN-B-q0YjXwW5IsdDo6"/>
+</div>
+<div class="w-full md:w-1/2 p-8 flex flex-col justify-between">
+<div>
+<span class="bg-tertiary-container text-on-tertiary-container px-3 py-1 rounded-full text-xs font-bold font-label mb-4 inline-block">WORKSHOP</span>
+<h3 class="font-headline text-2xl font-bold leading-tight mb-4 text-on-surface">Design Thinking with Industry Experts</h3>
+<p class="text-on-surface-variant line-clamp-3">A deep dive into product design with mentors from top tech firms including Figma and Google.</p>
+</div>
+<a class="mt-6 flex items-center gap-2 text-primary font-bold hover:gap-3 transition-all" href="#">
+                            Read Story <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Upcoming Events Highlight -->
+<section class="bg-surface-container-low py-24 mb-20 relative overflow-hidden">
+<div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 relative z-10">
+<div class="lg:col-span-5">
+<span class="font-label text-secondary text-sm font-bold tracking-[0.05em] uppercase">Save the Date</span>
+<h2 class="font-headline text-4xl md:text-5xl font-extrabold tracking-tight mt-2 mb-6 text-on-surface">Upcoming Events</h2>
+<p class="text-lg text-on-surface-variant mb-10 leading-relaxed">From casual meetups to intensive workshops, our calendar is packed with opportunities to grow and connect.</p>
+<button class="bg-on-surface text-surface px-8 py-4 rounded-full font-bold transition-transform hover:-translate-y-1 active:translate-y-0">
+                        View Full Calendar
+                    </button>
+</div>
+<div class="lg:col-span-7 space-y-4">
+<!-- Event Item -->
+<div class="bg-surface-container-lowest p-6 rounded-2xl flex items-center gap-6 shadow-soft group hover:bg-primary hover:text-white transition-all duration-300">
+<div class="flex-shrink-0 w-16 h-16 rounded-xl bg-surface-container-high flex flex-col items-center justify-center font-headline text-on-surface group-hover:bg-white/20 group-hover:text-white transition-colors">
+<span class="text-xl font-bold">14</span>
+<span class="text-xs uppercase font-bold">OCT</span>
+</div>
+<div class="flex-grow">
+<h4 class="text-xl font-bold font-headline mb-1">Weekly Social Mixer</h4>
+<p class="opacity-70 text-sm">Main Campus Lounge • 6:00 PM</p>
+</div>
+<span class="material-symbols-outlined transition-transform group-hover:translate-x-2">arrow_forward_ios</span>
+</div>
+<!-- Event Item -->
+<div class="bg-surface-container-lowest p-6 rounded-2xl flex items-center gap-6 shadow-soft group hover:bg-primary hover:text-white transition-all duration-300">
+<div class="flex-shrink-0 w-16 h-16 rounded-xl bg-surface-container-high flex flex-col items-center justify-center font-headline text-on-surface group-hover:bg-white/20 group-hover:text-white transition-colors">
+<span class="text-xl font-bold">19</span>
+<span class="text-xs uppercase font-bold">OCT</span>
+</div>
+<div class="flex-grow">
+<h4 class="text-xl font-bold font-headline mb-1">AI Research Symposium</h4>
+<p class="opacity-70 text-sm">Innovation Hall • 2:00 PM</p>
+</div>
+<span class="material-symbols-outlined transition-transform group-hover:translate-x-2">arrow_forward_ios</span>
+</div>
+<!-- Event Item -->
+<div class="bg-surface-container-lowest p-6 rounded-2xl flex items-center gap-6 shadow-soft group hover:bg-primary hover:text-white transition-all duration-300">
+<div class="flex-shrink-0 w-16 h-16 rounded-xl bg-surface-container-high flex flex-col items-center justify-center font-headline text-on-surface group-hover:bg-white/20 group-hover:text-white transition-colors">
+<span class="text-xl font-bold">22</span>
+<span class="text-xs uppercase font-bold">OCT</span>
+</div>
+<div class="flex-grow">
+<h4 class="text-xl font-bold font-headline mb-1">Photography Walk</h4>
+<p class="opacity-70 text-sm">Botanical Gardens • 8:00 AM</p>
+</div>
+<span class="material-symbols-outlined transition-transform group-hover:translate-x-2">arrow_forward_ios</span>
+</div>
+</div>
+</div>
+<!-- Decorative Background Element -->
+<div class="absolute -bottom-24 -right-24 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
+</section>
+<!-- Featured Projects Section (Bento Grid) -->
+<section class="max-w-7xl mx-auto px-6 mb-32">
+<div class="text-center mb-16">
+<span class="font-label text-secondary text-sm font-bold tracking-[0.05em] uppercase inline-block mb-4">Innovation Lab</span>
+<h2 class="font-headline text-4xl md:text-5xl font-extrabold tracking-tight text-on-surface">Featured Projects</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 auto-rows-[250px]">
+<!-- Large Project -->
+<div class="md:col-span-8 md:row-span-2 group relative overflow-hidden rounded-[2.5rem] bg-indigo-900">
+<img alt="Robotics project" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-1000" data-alt="advanced robotic arm being calibrated by student in a dark futuristic workshop with blue laser lights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDphASmU6nXiXozJWmUEtfHDK9seRPkQmVcHv4OEdvJxw3BU8QFFYgQy0OUmj2B4Xybf63REECb_xm8KgWZHq11J5fEEoqrOS360I4kOk9ivfaiAO6li4Du04MkAcdR0MFRB3egObxZLTf1khCMzh94t3_JHxuCxXU0Wey_8asUjSN_qs9Xhx_AQuQLOJr9A8dERWaLqrg_DEXQ2m4qtK_gQNhEv2kncQ6XgvQ3uid2c7v6-4PRX-xa3Ge-ugAclCPnm4AdxyKxfat2"/>
+<div class="absolute inset-0 bg-gradient-to-t from-indigo-950 via-transparent to-transparent"></div>
+<div class="absolute bottom-10 left-10 right-10">
+<span class="text-primary-fixed font-bold font-label text-xs tracking-widest uppercase">Robotics</span>
+<h3 class="text-white font-headline text-3xl font-bold mt-2">Autonomous Delivery Rover</h3>
+<p class="text-white/70 mt-4 max-w-md">Creating a sustainable, autonomous solution for campus document delivery using ROS2 and LiDAR technology.</p>
+<button class="mt-8 bg-white text-indigo-900 px-6 py-3 rounded-full font-bold flex items-center gap-2 hover:bg-primary-container hover:text-white transition-colors">
+                            Case Study <span class="material-symbols-outlined">rocket_launch</span>
+</button>
+</div>
+</div>
+<!-- Small Project 1 -->
+<div class="md:col-span-4 group relative overflow-hidden rounded-[2.5rem] bg-surface-container-highest shadow-soft">
+<img alt="Coding" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="aesthetic overhead shot of computer hardware, circuit boards, and vintage gaming consoles on a minimalist desk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOJj62djE70X79b8ZbDgoDj8urURFjAL05nRJ1FrLKcO3FPnPVkslijuSmSotGJz862HY7r_fESaSlAGpnz-OL4BBmlToBR8EUioNaI7sv6qY5qNMyAIOCyP5vrsFcHYqHmvHugNYw4sU51hYjocGlVQOnA4nEBdZaVN6BwtB9KBipGE4AMGKuHJ62n7KX_fr3pWrmKquTQeGFRGM6xHauyEL3OlnGJvFPa4a_LUvfqBqy5WhP7oKVBwZNPDFG3c5IpIAYD6OyfFaA"/>
+<div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors"></div>
+<div class="absolute inset-0 p-8 flex flex-col justify-end">
+<h3 class="text-white font-headline text-xl font-bold">Retro OS</h3>
+<p class="text-white/80 text-sm mt-1">A custom Unix-like OS for legacy hardware.</p>
+</div>
+</div>
+<!-- Small Project 2 -->
+<div class="md:col-span-4 group relative overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-indigo-600 to-primary-dim p-8 shadow-soft">
+<div class="h-full flex flex-col justify-between">
+<div class="w-12 h-12 bg-white/20 rounded-xl backdrop-blur-md flex items-center justify-center text-white">
+<span class="material-symbols-outlined">eco</span>
+</div>
+<div>
+<h3 class="text-white font-headline text-xl font-bold">Green Campus API</h3>
+<p class="text-white/80 text-sm mt-2">Real-time tracking of building energy usage and sustainability metrics.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Join Us Banner -->
+<section class="max-w-7xl mx-auto px-6">
+<div class="bg-surface-container-highest rounded-[3rem] p-8 md:p-20 relative overflow-hidden">
+<div class="relative z-10 flex flex-col items-center text-center max-w-2xl mx-auto">
+<div class="w-20 h-20 bg-indigo-600 text-white rounded-3xl flex items-center justify-center mb-8 rotate-6 shadow-lg shadow-indigo-200">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">group_add</span>
+</div>
+<h2 class="font-headline text-4xl md:text-6xl font-extrabold tracking-tight text-on-surface mb-6">Ready to lead the future?</h2>
+<p class="text-lg md:text-xl text-on-surface-variant mb-10">We're looking for passionate designers, engineers, and thinkers. No experience required—only curiosity.</p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-primary text-white px-10 py-5 rounded-full font-headline font-bold text-lg hover:scale-105 active:scale-95 transition-all shadow-xl shadow-indigo-200">
+                            Apply for Membership
+                        </button>
+<button class="bg-white text-on-surface px-10 py-5 rounded-full font-headline font-bold text-lg border border-outline-variant/30 hover:bg-surface transition-colors">
+                            Attend an Info Session
+                        </button>
+</div>
+</div>
+<!-- Decorative Elements -->
+<div class="absolute top-0 right-0 w-64 h-64 bg-indigo-200/40 rounded-full -mr-20 -mt-20 blur-3xl"></div>
+<div class="absolute bottom-0 left-0 w-64 h-64 bg-secondary-container/30 rounded-full -ml-20 -mb-20 blur-3xl"></div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-6 left-0 right-0 z-50 flex justify-around items-center px-4">
+<div class="bg-white/80 dark:bg-slate-900/80 backdrop-blur-2xl w-full max-w-md mx-auto rounded-full border border-white/20 shadow-2xl shadow-indigo-900/10 flex justify-around items-center h-16">
+<a class="flex flex-col items-center justify-center bg-gradient-to-br from-indigo-600 to-indigo-400 text-white rounded-full p-3 scale-110 shadow-lg" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 p-3 hover:bg-indigo-50 dark:hover:bg-slate-800 rounded-full transition-colors" href="#">
+<span class="material-symbols-outlined">calendar_month</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 p-3 hover:bg-indigo-50 dark:hover:bg-slate-800 rounded-full transition-colors" href="#">
+<span class="material-symbols-outlined">storefront</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 p-3 hover:bg-indigo-50 dark:hover:bg-slate-800 rounded-full transition-colors" href="#">
+<span class="material-symbols-outlined">rocket_launch</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 p-3 hover:bg-indigo-50 dark:hover:bg-slate-800 rounded-full transition-colors" href="#">
+<span class="material-symbols-outlined">group_add</span>
+</a>
+</div>
+</nav>
+<!-- Footer -->
+<footer class="bg-on-surface text-surface py-20">
+<div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="col-span-1 md:col-span-2">
+<h3 class="font-headline text-3xl font-bold mb-6">Kinetic Club</h3>
+<p class="text-surface-variant max-w-sm mb-8">Building the next generation of campus leaders through technology, design, and community impact.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors" href="#">
+<span class="material-symbols-outlined">share</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors" href="#">
+<span class="material-symbols-outlined">mail</span>
+</a>
+</div>
+</div>
+<div>
+<h4 class="font-headline font-bold mb-6">Organization</h4>
+<ul class="space-y-4 text-surface-variant">
+<li><a class="hover:text-white transition-colors" href="#">About Us</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Our Team</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Contact</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Resources</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-headline font-bold mb-6">Legal</h4>
+<ul class="space-y-4 text-surface-variant">
+<li><a class="hover:text-white transition-colors" href="#">Constitution</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Code of Conduct</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-6 mt-20 pt-8 border-t border-white/10 text-surface-variant text-sm flex flex-col md:flex-row justify-between items-center gap-4">
+<p>© 2024 Kinetic Club. All rights reserved.</p>
+<div class="flex items-center gap-1">
+                Made with <span class="material-symbols-outlined text-secondary text-sm" style="font-variation-settings: 'FILL' 1;">favorite</span> on campus
+            </div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Events Archive | Kinetic Club</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-error-container": "#510017",
+                        "inverse-primary": "#7387ff",
+                        "surface-bright": "#f9f5ff",
+                        "on-primary-fixed-variant": "#001a88",
+                        "tertiary-dim": "#005c2b",
+                        "on-secondary-fixed-variant": "#9b2200",
+                        "primary-fixed": "#8999ff",
+                        "secondary-fixed": "#ffc4b6",
+                        "on-primary": "#f3f1ff",
+                        "surface-container-lowest": "#ffffff",
+                        "outline-variant": "#aca8d7",
+                        "surface-tint": "#2444eb",
+                        "tertiary-fixed": "#3fff8b",
+                        "error-container": "#f74b6d",
+                        "inverse-on-surface": "#9c98c6",
+                        "on-secondary": "#ffefec",
+                        "error-dim": "#a70138",
+                        "on-tertiary-container": "#005d2c",
+                        "background": "#f9f5ff",
+                        "on-surface-variant": "#5a5781",
+                        "tertiary-fixed-dim": "#24f07e",
+                        "secondary-fixed-dim": "#ffb09d",
+                        "on-error": "#ffefec",
+                        "outline": "#75729e",
+                        "surface-container": "#eae5ff",
+                        "tertiary": "#006a33",
+                        "on-surface": "#2d2a51",
+                        "on-tertiary": "#cdffd3",
+                        "on-primary-fixed": "#000000",
+                        "surface-container-low": "#f3eeff",
+                        "primary": "#2444eb",
+                        "on-tertiary-fixed-variant": "#006832",
+                        "on-secondary-container": "#8b1d00",
+                        "inverse-surface": "#0b082f",
+                        "error": "#b41340",
+                        "primary-dim": "#0934e0",
+                        "secondary-dim": "#9a2100",
+                        "surface": "#f9f5ff",
+                        "on-background": "#2d2a51",
+                        "on-tertiary-fixed": "#004820",
+                        "primary-container": "#8999ff",
+                        "on-primary-container": "#001470",
+                        "surface-variant": "#ddd9ff",
+                        "surface-container-highest": "#ddd9ff",
+                        "surface-dim": "#d4cfff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    },
+                    "boxShadow": {
+                        "soft": "0 20px 40px rgba(45, 42, 81, 0.06)"
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .font-plus-jakarta { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .font-manrope { font-family: 'Manrope', sans-serif; }
+        .text-display-lg { font-size: 3.5rem; line-height: 1.1; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body text-on-surface min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/70 dark:bg-slate-950/70 backdrop-blur-xl shadow-soft">
+<nav class="flex justify-between items-center px-8 h-20 w-full max-w-7xl mx-auto">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-primary-container flex items-center justify-center text-white font-bold">KC</div>
+<h1 class="font-plus-jakarta text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-indigo-600 to-indigo-400">Kinetic Club</h1>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-indigo-500 transition-colors duration-300" href="#">Home</a>
+<a class="text-indigo-700 dark:text-indigo-300 font-bold border-b-2 border-indigo-600" href="#">Events</a>
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-indigo-500 transition-colors duration-300" href="#">Store</a>
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-indigo-500 transition-colors duration-300" href="#">Projects</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-indigo-600 hover:bg-indigo-50 rounded-full transition-all">
+<span class="material-symbols-outlined">shopping_bag</span>
+</button>
+</div>
+</nav>
+</header>
+<main class="pt-32 px-6 max-w-7xl mx-auto">
+<!-- Hero Section -->
+<section class="relative mb-16">
+<span class="font-label text-secondary font-bold tracking-widest uppercase text-xs mb-4 block">Club Community</span>
+<h2 class="font-plus-jakarta text-display-lg font-extrabold tracking-tight text-on-surface mb-6 max-w-2xl">
+                Moments that <span class="text-primary italic">Move</span> Us.
+            </h2>
+<!-- Toggle Component -->
+<div class="inline-flex p-1.5 bg-surface-container-low rounded-full">
+<button class="px-8 py-3 rounded-full bg-white shadow-soft text-primary font-bold text-sm transition-all">Upcoming</button>
+<button class="px-8 py-3 rounded-full text-on-surface-variant font-medium text-sm hover:text-primary transition-all">Past Archive</button>
+</div>
+</section>
+<!-- Main Content Area: Bento Grid for Upcoming -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 mb-24">
+<!-- Featured Upcoming Event -->
+<div class="md:col-span-8 group relative overflow-hidden rounded-3xl bg-surface-container-lowest shadow-soft border border-outline-variant/10">
+<div class="aspect-[16/9] w-full relative">
+<img alt="Conference Hall" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Modern tech conference hall with dynamic neon blue and purple lighting, crowd of engaged students sitting in ergonomic chairs" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0Vf4BDSJgdvqYI8fo_anW9OeYoZVgzS9UDL1dD0gy8u6JehXPSruK0RL9AbFPNXJSOn-lM-MF1Azr6KwEvCHodgn_sZIXDLVJLBDDll2lf6bElB-LiuTU3kOoKKhpqkOw7rrB93lUUMd-tvcbJ0e5m20KFXvQuR4XL0QG5hFNTalMKYYyV89CgM4NPapqWKXV3lPFc1TGdxeOvjzoc5nLSxVLkwrW54LUMHANvuAkhG8MOjwz46iWCuzHYYEJO9JJsIA_TzVneMc5"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-8 left-8 text-white">
+<div class="flex gap-2 mb-4">
+<span class="px-3 py-1 bg-secondary-container text-on-secondary-container rounded-full text-xs font-bold font-label uppercase tracking-wider">New Event</span>
+<span class="px-3 py-1 bg-white/20 backdrop-blur-md text-white rounded-full text-xs font-medium">Workshop</span>
+</div>
+<h3 class="text-4xl font-plus-jakarta font-bold mb-2">Kinetic Hackathon 2024</h3>
+<p class="text-white/80 font-medium flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">calendar_today</span> Oct 24 - 26, 2024
+                        </p>
+</div>
+</div>
+<div class="p-8 flex justify-between items-center">
+<div>
+<p class="text-on-surface-variant max-w-md">Join 500+ innovators for 48 hours of building, learning, and competing for $10k in prizes.</p>
+</div>
+<button class="px-8 py-4 bg-gradient-to-br from-primary to-primary-container text-white rounded-full font-bold shadow-lg shadow-primary/20 hover:scale-105 transition-transform">
+                        Register Now
+                    </button>
+</div>
+</div>
+<!-- Side Card: Quick Info -->
+<div class="md:col-span-4 flex flex-col gap-8">
+<div class="flex-1 bg-primary text-on-primary p-8 rounded-3xl flex flex-col justify-between relative overflow-hidden">
+<span class="material-symbols-outlined text-6xl opacity-20 absolute -top-4 -right-4">rocket_launch</span>
+<div>
+<h4 class="text-2xl font-bold mb-2">Next Social</h4>
+<p class="text-on-primary/70 mb-6">Coffee &amp; Code Morning</p>
+<div class="flex items-center gap-3 bg-white/10 p-4 rounded-2xl backdrop-blur-md">
+<div class="bg-white/20 p-2 rounded-xl">
+<span class="material-symbols-outlined">schedule</span>
+</div>
+<div>
+<p class="text-xs font-bold uppercase tracking-tighter text-white/60">Tomorrow</p>
+<p class="font-bold">09:00 AM</p>
+</div>
+</div>
+</div>
+<button class="w-full py-4 bg-white text-primary rounded-full font-bold mt-8">Add to Calendar</button>
+</div>
+<div class="flex-1 bg-surface-container-high p-8 rounded-3xl border border-outline-variant/20">
+<h4 class="text-xl font-bold mb-4">Venue Spotlight</h4>
+<img alt="Modern Office" class="w-full h-32 object-cover rounded-2xl mb-4" data-alt="Interior of a minimalist modern co-working space with floor-to-ceiling windows and modular wooden furniture in bright natural light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNcPDw54VMuCLrZRviJ6JBEwwiN4_Z8Dx0NQc_PXz52ZSa067VEB5dQ2cNLaI9idoRIAQbbREU-BtvmDWE2OVgfRsXjVA2XsXEWR60BqpfAjWWMzDRdEJPBBfLlGl1lf9Z-DefrKn3yjAiLVZFZxtqn4gKNGjoFN-UygG1IabxxsZxUfHlzQ6Afhu82_AgpttpbFXgkJ5mKVF74zukOcFfzjpgAyacxR_lpeGUx2N9ahaPLfhkojk-bPtimJHUHCTuNktqFq3r6Rkq"/>
+<p class="text-sm text-on-surface-variant font-medium">The Hub, North Campus. Fully equipped with fiber internet and ergonomic pods.</p>
+</div>
+</div>
+</div>
+<!-- Archive Section (Past Events) -->
+<section class="mb-32">
+<div class="flex items-end justify-between mb-12">
+<div>
+<h2 class="text-3xl font-plus-jakarta font-bold mb-2">The Archive</h2>
+<p class="text-on-surface-variant">Looking back at the milestones we've achieved together.</p>
+</div>
+<button class="text-primary font-bold flex items-center gap-2 hover:gap-4 transition-all">
+                    View All Gallery <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+<!-- Past Events Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- Past Event Card 1 -->
+<div class="bg-surface-container-lowest rounded-3xl overflow-hidden shadow-soft flex flex-col">
+<div class="h-48 relative">
+<img alt="Gala Dinner" class="w-full h-full object-cover" data-alt="Close up of people celebrating at a club event, blurry festive lights in the background with warm golden atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiCTEZbmVM15V_PJKLV_GI5FyGlqxApo0XzWt05avrPWizvAaa9Q4NumHess6MTzO64mk2CiOTFLN_0tTOr0Rvz4fangGxY17NdPqRGIEaAPReYq-kyOYuBj0MLhUQKCOOGb9eVQb6sYqPL4jdCoYHYoEO9wnppKLCdZzGhaw2I1EQ1sECHZdlStRukGctvCewgvXSRCkldcBPg-teAcAobmi-q8bM_BmJe-6bquEonxmsSVJW_uvm3nU_Ek8FTwCAZNTMN1kPDqR2"/>
+<div class="absolute top-4 left-4 px-3 py-1 bg-white/90 backdrop-blur text-primary font-bold rounded-full text-xs">
+                            Completed
+                        </div>
+</div>
+<div class="p-6 flex-1">
+<h4 class="text-xl font-bold mb-3">Summer Soirée 2024</h4>
+<div class="flex items-center gap-1 text-secondary mb-4">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs font-bold text-on-surface-variant ml-2">(4.9/5)</span>
+</div>
+<div class="bg-surface-container-low p-4 rounded-2xl mb-4">
+<p class="text-xs font-bold text-primary uppercase mb-2 tracking-widest">🏆 Winners</p>
+<p class="text-sm font-bold">The Pixel Pioneers</p>
+</div>
+<p class="text-sm text-on-surface-variant italic leading-relaxed">
+                            "Absolutely the best organized event of the semester. The networking opportunities were insane!" — Sarah J.
+                        </p>
+</div>
+</div>
+<!-- Past Event Card 2 -->
+<div class="bg-surface-container-lowest rounded-3xl overflow-hidden shadow-soft flex flex-col">
+<div class="h-48 relative">
+<img alt="Group Project" class="w-full h-full object-cover" data-alt="Cheerful college students working together on a group project in a sunny library, books and laptops on wooden table" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyEWkrIyPbwayLyciRXw_n9pn7cfD_-cP2QrL0nwoq-4Q5q25EUUxm5BfQcoh22Ej61HeIgvEuRuVoMlGJNUCpqY4rfeJwwlmsB7mXiPEfPnaxCrYUciTH7sQasGgN_hUsVGqf30oiSOlrVXO2Lu2hdm5URoMHMMR6naG8Vb--kntv36tNwZ_bGt57gsjjmLftexx0WwADlOVUwpjZDjwrMB0x91KJlmvroZADWrnZ8-drQgrILDzGBuVJzPxktHlzlSWTB77bQw1r"/>
+</div>
+<div class="p-6 flex-1">
+<h4 class="text-xl font-bold mb-3">Design Sprint Week</h4>
+<div class="flex items-center gap-1 text-secondary mb-4">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="text-xs font-bold text-on-surface-variant ml-2">(4.2/5)</span>
+</div>
+<div class="bg-surface-container-low p-4 rounded-2xl mb-4">
+<p class="text-xs font-bold text-primary uppercase mb-2 tracking-widest">🏆 Winners</p>
+<p class="text-sm font-bold">Team Echo Design</p>
+</div>
+<p class="text-sm text-on-surface-variant italic leading-relaxed">
+                            "Challenging but rewarding. Learned more about Figma in 3 days than in a year." — Alex M.
+                        </p>
+</div>
+</div>
+<!-- Past Event Card 3 -->
+<div class="bg-surface-container-lowest rounded-3xl overflow-hidden shadow-soft flex flex-col">
+<div class="h-48 relative">
+<img alt="Business Workshop" class="w-full h-full object-cover" data-alt="Group of diverse professionals collaborating around a large table with colorful post-it notes on a glass wall in background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIy0IPdCHlPoy6dbktp6FuoeWGAOiXLEwWvgszwb1pKNI94DZEF7aK5wJ6KIY8HrT8glLm2KIvST4wHkUvxPQroDgD4UwNuaYL4CWDAEwDvh7nBzCjZZ7lsrmeDhvEIVnqWoACEsfBe4BqdP2rc0WrzOocX3HN6lLXmj9G2wvDjcN-oZ2524EZmKEujRKj1V6J10irPfJMrTB1j8Wc8i6-0NkLpBpfwNoQQ9vmluFrfA-SS31E-WAIbr6GfZ6C8p57rHKVvPapQ2gj"/>
+</div>
+<div class="p-6 flex-1">
+<h4 class="text-xl font-bold mb-3">Entrepreneurship Lab</h4>
+<div class="flex items-center gap-1 text-secondary mb-4">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs font-bold text-on-surface-variant ml-2">(5.0/5)</span>
+</div>
+<div class="bg-surface-container-low p-4 rounded-2xl mb-4">
+<p class="text-xs font-bold text-primary uppercase mb-2 tracking-widest">🏆 Winners</p>
+<p class="text-sm font-bold">Solace Tech Solutions</p>
+</div>
+<p class="text-sm text-on-surface-variant italic leading-relaxed">
+                            "A masterclass in pitching. The judges gave direct, usable feedback." — Marcus V.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-6 left-0 right-0 z-50 flex justify-around items-center px-4 md:hidden">
+<div class="w-[90%] max-w-md mx-auto bg-white/80 dark:bg-slate-900/80 backdrop-blur-2xl rounded-full border border-white/20 shadow-2xl shadow-indigo-900/10 flex justify-around items-center h-16 px-2">
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 p-3 hover:bg-indigo-50 dark:hover:bg-slate-800 rounded-full transition-all" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-manrope text-[10px] uppercase tracking-wide mt-0.5">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-gradient-to-br from-indigo-600 to-indigo-400 text-white rounded-full p-3 scale-110 shadow-lg shadow-indigo-600/30" href="#">
+<span class="material-symbols-outlined">calendar_month</span>
+<span class="font-manrope text-[10px] uppercase tracking-wide mt-0.5">Events</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 p-3 hover:bg-indigo-50 dark:hover:bg-slate-800 rounded-full transition-all" href="#">
+<span class="material-symbols-outlined">storefront</span>
+<span class="font-manrope text-[10px] uppercase tracking-wide mt-0.5">Store</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 p-3 hover:bg-indigo-50 dark:hover:bg-slate-800 rounded-full transition-all" href="#">
+<span class="material-symbols-outlined">rocket_launch</span>
+<span class="font-manrope text-[10px] uppercase tracking-wide mt-0.5">Projects</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 p-3 hover:bg-indigo-50 dark:hover:bg-slate-800 rounded-full transition-all" href="#">
+<span class="material-symbols-outlined">group_add</span>
+<span class="font-manrope text-[10px] uppercase tracking-wide mt-0.5">Join</span>
+</a>
+</div>
+</nav>
+</body></html>
